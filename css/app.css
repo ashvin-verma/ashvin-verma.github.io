@@ -3,7 +3,7 @@
     background-image: url("../background_2.png");
 
     /* Set a specific height */
-    min-height: 1000px; 
+    min-height: 500px; 
 
     /* Create the parallax scrolling effect */
     background-attachment: fixed;
@@ -42,16 +42,17 @@ body{
   }
 .opening{
   background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(95, 95, 95,0.1));
-  padding-top: 1rem;
-  overflow: auto;
+  padding:0;
+  height: 800px;
 }
 ul {
     list-style-type: none;
+    width: 100%;
     margin: 0;
     padding: 0;
     overflow: hidden;
     opacity: 50%;
-    position: sticky;
+
     top: 0;
 }
 
@@ -64,7 +65,6 @@ li img{
   padding: 14px 16px;
   text-decoration: none;
   height: 5rem;
-  position: sticky;
   top: 0;
 }
 li a {
@@ -78,8 +78,8 @@ li a {
   font-family: 'Montserrat','Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-weight: lighter;
   transition: all .25s ease;
-  position: sticky;
   top: 0;
+  padding-top: 3rem;
 }
 .card{
   background-color: white;
