@@ -1,4 +1,281 @@
+@font-face {
+    font-family: Arkhand;
+    src: url(Arkhand.otf);
+}
+@font-face {
+    font-family: Arkhand;
+    src: url(Arkhand_Bold.otf);
+    font-weight:bold;
+}
+@font-face {
+  font-family: Arkhand;
+  src: url(Arkhand_Extrabold.woff);
+  font-weight:bolder;
+}
+.parallax {
+    /* The image used */
+    background-image: url("../background_2.png");
+
+    /* Set a specific height */
+    min-height: 1000px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 0px;
+}
+
 h1{
-    text:red;
-    display: block;  
+  vertical-align: middle;
+  text-align: center;
+  padding-top:5rem;
+  padding-bottom: 5rem;
+  color: white;
+  font-size: 50pt;
+  font-family: 'Raleway', 'Segoe UI Light', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: normal;
+  margin: 0px;
+  position: sticky;
+  opacity: 100%;
+}
+p{  vertical-align: middle;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  font-family: 'Montserrat', 'Segoe UI Light', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  padding-bottom: 10rem;
+  opacity: 100%;
+
+
+}
+body{
+  padding: 0px;
+  margin: 0px;
+  }
+.opening{
+  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(95, 95, 95,0.1));
+  padding-top: 1rem;
+  overflow: auto;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    opacity: 50%;
+    position: sticky;
+    top: 0;
+}
+
+li {
+    text-transform: uppercase;
+}
+li img{
+  float:left;
+  display: block; 
+  padding: 14px 16px;
+  text-decoration: none;
+  height: 5rem;
+  position: sticky;
+  top: 0;
+}
+li a {
+  float: right;
+  display: block; 
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: 'Montserrat','Segoe UI', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: lighter;
+  transition: all .25s ease;
+  position: sticky;
+  top: 0;
+}
+.card{
+  background-color: white;
+  height: 10rem;
+  padding: 2rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+    background-color: white;
+    color: 	rgb(24,24,24);
+}
+div.left{
+  float: left;
+
+}
+.black{
+  color: black;
+}
+div.right{
+  float:right;
+  height: 25rem;
+  width: 50rem;
+}
+div.rightthree{
+  float:right;
+  height: 25rem;
+  width: 45rem;
+}
+h1.black{
+  font-size: 3rem;
+  padding: 0px;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+h1.blacktwo{
+  font-size: 3rem;
+  padding: 0px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color:black;
+}
+p.black{
+  font-size: 1.2rem;
+  padding: 0px;
+  font-weight: 300;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  }
+
+img.left{
+  height: 24.5rem;
+  width: 43.75rem;
+  border-radius: 0.5rem;
+}
+
+div.twoleft{
+  height: 10rem;
+  width: 45rem;
+  float: left;
+}
+div.tworight{
+  float: right;
+}
+div.final{
+  height: 37.5rem;
+  width: 80rem;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 6.5rem;
+  padding-top: 2.5rem;
+  padding-left: 9.5rem;
+  background-image: url(../back.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0px;
+  border-radius: 1rem;
+}
+div#buy{
+  width: 50rem;
+  height: 42.5rem;
+  background-color: rgb(30, 30, 30);
+  border-radius: 2rem;
+  padding-left: 15rem;
+  padding-right: 15rem;
+}
+h1#buyscreen{
+  padding-top: 2rem;
+  text-transform: uppercase;
+  padding-bottom: 0rem;
+  text-align: center;
+  font-family: Anton;
+}
+div.button{
+  width: 10rem;
+  padding: 1rem;
+  border-color: orange;
+  border-width: 0.05rem;
+  border-style: solid;
+  color: orange;
+  font-family: Montserrat;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 1.5rem;
+  text-align: center;
+  display: inline;
+  margin-right: 5rem;
+  transition: all .25s ease;
+  border-radius: 0.5rem;
+}
+div.button:hover{
+  background-color: orange;
+  color: white;
+}
+a.bu{
+  color: orange;
+  font-family: Montserrat;
+  text-transform: uppercase;
+  font-weight: lighter;
+  text-decoration: none;
+  transition: all .125s ease;
+}
+a.bu:hover{
+  color: white;
+}
+div.buttontwo{
+  width: 10rem;
+  padding: 1rem;
+  border-color: orange;
+  border-width: 0.05rem;
+  border-style: solid;
+  color: orange;
+  font-family: Montserrat;
+  text-transform: uppercase;
+  font-weight: 200;
+  font-size: 1.5rem;
+  text-align: center;
+  display: inline;
+  margin-left:5rem;
+  transition: all .25s ease;
+  border-radius: 0.5rem;
+}
+div.buttontwo:hover{
+  background-color: orange;
+  color: white;
+}
+div.buttons{
+  padding-left:35rem;
+  padding-bottom: 10%;
+}
+img#steam{
+  height: 4.5rem;
+  width: 8rem;
+
+  border-radius: 1rem;
+  margin-right: 3rem;
+}
+img#ps4{
+  height:5rem;
+  width: 20rem;
+  border-radius: 1rem;
+  margin-right: 3rem;
+}
+img#xbox{
+  height: 5.225rem;
+  width: 13.6rem;
+  border-radius: 1rem;
+}
+p#available{
+  font-family: 'Roboto Condensed';
+  padding: 0px;
+  padding-bottom: 1rem;
+}
+img#box{
+    height:20rem;
+    width: 15rem;
+    padding-left:17.5rem;
+    padding-right: 17.5rem; 
 }
