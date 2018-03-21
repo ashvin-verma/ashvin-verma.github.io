@@ -88,11 +88,72 @@ li a {
   position: sticky;
   top: 0;
 }
-
+.card{
+  background-color: white;
+  height: 10rem;
+  padding: 2rem;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
 /* Change the link color to #111 (black) on hover */
 li a:hover {
     background-color: white;
     color: 	rgb(24,24,24);
+}
+div.left{
+  float: left;
+
+}
+.black{
+  color: black;
+}
+div.right{
+  float:right;
+  height: 25rem;
+  width: 50rem;
+}
+div.rightthree{
+  float:right;
+  height: 25rem;
+  width: 45rem;
+}
+h1.black{
+  font-size: 3rem;
+  padding: 0px;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+h1.blacktwo{
+  font-size: 3rem;
+  padding: 0px;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  color:black;
+}
+p.black{
+  font-size: 1.2rem;
+  padding: 0px;
+  font-weight: 300;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  }
+
+img.left{
+  height: 24.5rem;
+  width: 43.75rem;
+}
+
+div.twoleft{
+  height: 10rem;
+  width: 45rem;
+  float: left;
+}
+div.tworight{
+  float: right;
 }
 </style>
   <title>gg</title>
@@ -110,8 +171,35 @@ li a:hover {
       <h1>One Piece: World Seeker!</h1>
       <p> Get Ready for Adventure with the Mugiwaras &copy; !</p>
     </div>
-    <div id="buy">
-      <img src="fight.png">
+    <div class="card">
+      <div class="left">
+      <img src="action.jpg"class="left">
+      </div>
+      <div class="right">
+      <h1 class="black">Colorful, vivid battles!</h1>
+      <p class="black">Lorem ipsum dolor sit amet, facete disputationi ei duo, idque omittantur necessitatibus an qui. Adhuc epicurei petentium ea eos, qui in modus quidam, eos cu blandit voluptatum. Usu prima dictas eripuit id, quidam invidunt consulatu ne sed. No tota ceteros similique per. Porro harum menandri sit ea, mel option dignissim no. Euismod veritus assueverit at pri, wisi quidam ornatus quo ex, mei ne elitr option facilisi.
+        </p>
+      </div>
+      <hr style="width:100%;height: .05rem;background-color: darkgray;border-width:  0px;">
+      <div class="card">
+        <div class="twoleft">
+          <h1 class="black">Massive Open world!</h1>
+          <p class="black">Lorem ipsum dolor sit amet, facete disputationi ei duo, idque omittantur necessitatibus an qui. Adhuc epicurei petentium ea eos, qui in modus quidam, eos cu blandit voluptatum. Usu prima dictas eripuit id, quidam invidunt consulatu ne sed. No tota ceteros similique per. Porro harum menandri sit ea, mel option dignissim no. Euismod veritus assueverit at pri, wisi quidam ornatus quo ex, mei ne elitr option facilisi.</p>
+        </div>
+        <div class="tworight">
+          <img src="world.jpg" class="left">
+        </div>
+      </div>
+      <hr style="width:100%;height: .05rem;background-color: darkgray;border-width:  0px;">
+      <div class="card">
+          <div class="left">
+          <img src="gameplay.jpg"class="left">
+          </div>
+          <div class="rightthree">
+          <h1 class="blacktwo">Entirely new <br /> gameplay style!</h1>
+          <p class="black">Lorem ipsum dolor sit amet,facete disputationi ei duo, idque omittantur necessitatibus an qui. Adhuc epicurei petentium ea eos, qui in modus quidam, eos cu blandit voluptatum. Usu prima dictas eripuit id, quidam invidunt consulatu ne sed. No tota ceteros similique per. Porro harum menandri sit ea, mel option dignissim no. Euismod veritus assueverit at pri, wisi quidam ornatus quo ex, mei ne elitr option facilisi.
+            </p>
+          </div>
     </div>
   </section>
 </body>
