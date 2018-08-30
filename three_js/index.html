@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8>
+		<title>My first three.js app</title>
+		<style>
+			body { margin: 0; }
+			canvas { width: 100%; height: 100% }
+		</style>
+	</head>
+	<body>
+		<script src="js/StereoEffect.js"></script>
+		<script src="js/three.js"></script>
+		<script src='js/OrbitControl.js'></script>
+		<script src="js/GLTFLoader.js"></script>
+		<script>
+			var effect
+			var scene = new THREE.Scene();
+			var camera = new THREE.PerspectiveCamera( 75, window.innerWidth/window.innerHeight, 0.1, 1000 );
+// 			var camera = new THREE.OrthographicCamera( - 1, 1, 1, - 1, 0, 10 )
+			var loader = new THREE.GLTFLoader();
+			loader.load(
+	// resource URL
+	'test2.gltf',
+	// called when the resource is loaded
+	function ( gltf ) {
+
+		scene.add( gltf.scene );
+
+		gltf.animations; // Array<THREE.AnimationClip>
+		gltf.scene; // THREE.Scene
+		gltf.scenes; // Array<THREE.Scene>
+		gltf.cameras; // Array<THREE.Camera>
+		gltf.asset; // Object
+
+	},
+
+
+
+// function called on successful load
+	// called while loading is progressing
+	function ( xhr ) {
+
+		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+
+	},
+	// called when loading has errors
+	function ( error ) {
+
+		console.log( 'An error happened' );
+
+	}
+);
+/*
+var loader = new THREE.OBJLoader();
+
+// load a resource
+loader.load(
+	// resource URL
+	'test2.obj',
+	// called when resource is loaded
+	function ( object ) {
+
+		scene.add( object );
+
+	},
+	// called when loading is in progresses
+	function ( xhr ) {
+
+		console.log( ( xhr.loaded / xhr.total * 100 ) + '% loaded' );
+
+	},
+	// called when loading has errors
+	function ( error ) {
+
+		console.log( 'An error happened' );
+
+	}
+);
+*/
+
+			var renderer = new THREE.WebGLRenderer({antialias:true});
+			renderer.setSize( window.innerWidth, window.innerHeight );
+			document.body.appendChild( renderer.domElement );
+/*
+			var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+			var material = new THREE.MeshLambertMaterial( { color: 0x00ff00 } );
+			var cube = new THREE.Mesh( geometry, material );
+			scene.add( cube );
+*/
+			var light = new THREE.PointLight(0xffffff,1,0,2);
+			light.position.set(-100,200,100);
+			scene.add(light);
+//			gltf.rotation.x = 0.01;
+
+
+			camera.position.z = 1;
+//			camera.rotation.y = 0.1;
+			//effect = new THREE.StereoEffect(renderer);
+			
+			var controls = new THREE.OrbitControls( camera );
+
+			controls.update();
+
+			var animate = function () {
+				requestAnimationFrame( animate );
+				controls.update();
+/*
+				gltf.rotation.x += 0.01;
+				gltf.rotation.y += 0.01;
+*/
+				renderer.render( scene, camera );
+			};
+
+			animate();
+	</script>
+	</body>
+</html>
